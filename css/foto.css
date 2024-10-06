@@ -1,0 +1,150 @@
+/* Importamos fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f8f9fa; /* Fondo neutro */
+    color: #212529;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 70px; /* Ajuste para evitar que el contenido quede oculto bajo el menú */
+}
+
+/* Menú de navegación fijo */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000; /* Fondo translúcido */
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul {
+    list-style: circle;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* Efecto de subrayado */
+}
+
+nav ul li a:hover {
+    color: #FFF;
+    border-bottom: 2px solid #FFF; /* Subrayado en hover */
+}
+
+nav.scrolled {
+    background-color: #007bff; /* Cambio de color al hacer scroll */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+nav.scrolled ul li a {
+    color: #fff;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.tarjeta-contenedor {
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    perspective: 1000px;
+}
+
+.tarjeta {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2.0s;
+    top: -70px;
+}
+
+.tarjeta:hover {
+    transform: rotateY(180deg);
+}
+
+.adentro, .afuera {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.adentro {
+    background-color: #f9f9f9;
+}
+
+.adentro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.afuera {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+audio{
+    width: 15%;
+
+}
+
+.price {
+            font-size: 1.5em;  
+            color: red;  
+            font-weight: bold; 
+        }
+.currency {
+            font-size: 0.8em;  
+            vertical-align: top; 
+        }
+.decimal {
+            font-size: 0.9em; 
+        }

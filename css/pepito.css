@@ -1,0 +1,137 @@
+/* Importamos fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f8f9fa; /* Fondo neutro */
+    color: #212529;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 70px; /* Ajuste para evitar que el contenido quede oculto bajo el menú */
+}
+
+/* Menú de navegación fijo */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000; /* Fondo translúcido */
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul {
+    list-style: circle;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* Efecto de subrayado */
+}
+
+nav ul li a:hover {
+    color: #FFF;
+    border-bottom: 2px solid #FFF; /* Subrayado en hover */
+}
+
+nav.scrolled {
+    background-color: #007bff; /* Cambio de color al hacer scroll */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+nav.scrolled ul li a {
+    color: #ffffff;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Secciones principales */
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: red; /* Títulos en azul */
+    margin-bottom: 10px;
+}
+
+section p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo para la línea de tiempo */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    background: #f9f9f9;
+    border-left: 5px solid red; /* Línea vertical azul en la izquierda */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.timeline-item h3 {
+    margin-top: 0;
+}
+
+/* Estilo para los valores */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: red; /* Color del pie de página en azul */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    section {
+        padding: 15px;
+    }
+}

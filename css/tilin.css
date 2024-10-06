@@ -1,0 +1,219 @@
+/* Importamos fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f8f9fa; /* Fondo neutro */
+    color: #212529;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 70px; /* Ajuste para evitar que el contenido quede oculto bajo el menú */
+}
+
+/* Menú de navegación fijo */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000; /* Fondo translúcido */
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul {
+    list-style: circle;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* Efecto de subrayado */
+}
+
+nav ul li a:hover {
+    color: #FFF;
+    border-bottom: 2px solid #FFF; /* Subrayado en hover */
+}
+
+nav.scrolled {
+    background-color: #007bff; /* Cambio de color al hacer scroll */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+nav.scrolled ul li a {
+    color: #ffffff;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 60px auto; /* Ajuste para evitar solapamiento con el menú */
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra más prominente */
+    line-height: 1.7;
+    transition: all 0.3s ease; /* Transición suave para cualquier cambio */
+}
+
+/* Efecto hover en el contenedor */
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+aside {
+    flex: 0 0 640px; /* Ancho fijo para el video */
+    margin-left: 1200px;
+    margin-top: -350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+aside video:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más prominente al pasar el cursor */
+}
+img:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más prominente al pasar el cursor */
+}
+.ski img{
+    margin-left: 1300px;
+    margin-top: -1000px;
+    width: 22%;
+    border: 5px solid #E71D1D; /* Color y grosor del borde */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 5px; /* Espacio entre la imagen y el borde */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */    
+}
+
+.ski2 img{
+    margin-left: 1300px;
+    margin-top: -300px;
+    width: 22%;
+     border: 5px solid #E71D1D; /* Color y grosor del borde */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 5px; /* Espacio entre la imagen y el borde */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */  
+}
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Fuente elegante */
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Estilo especial para el primer título */
+h1 {
+    font-size: 36px;
+    text-transform: uppercase; /* Todo en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    color: #007bff;
+    position: relative;
+    overflow: hidden;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #E71D1D;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+
+h1:hover::before {
+    transform: scaleX(1); /* Efecto de subrayado animado */
+}
+
+h2 {
+    font-size: 28px;
+    border-bottom: 2px solid #E71D1D;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+/* Párrafos */
+p {
+     font-size: 18px; /* Tamaño de fuente */
+    color: #555; /* Color del texto */
+    margin-bottom: 15px; /* Ajuste del margen inferior */
+    line-height: 1.5; /* Interlineado más compacto */
+    text-align: justify; /* Justificación del texto para un aspecto más formal */
+    max-width: 800px; /* Limita el ancho de los párrafos para mejorar la legibilidad */
+    margin-left: 10px; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+}
+
+/* Botones */
+.button {
+    display: inline-block;
+    padding: 14px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px; /* Bordes más redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: all 0.3s ease; /* Transiciones en todos los cambios */
+}
+
+.button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más prominente en hover */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Pie de página */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #ced4da;
+}
+
+footer h2{
+    font-size: 14px;
+    color: #ced4da;
+    margin-right: 1700px;
+    margin-top: 1000px;
+    margin-top: 10px;
+}
